@@ -14,14 +14,18 @@
     </div>
 
     <div class="home-header-middle">
-      <input placeholder="请输入关键字" />
+      <Search/>
     </div>
   </div>
 </template>
 
 <script>
+import Search from '../Search/index.vue'
 export default {
-  name: "HomeHeader"
+  name: "HomeHeader",
+  components: {
+    Search
+  }
 };
 </script>
 
@@ -36,13 +40,6 @@ export default {
 }
 .home-header-middle {
   margin: 0px 40px 0px 100px;
-  background-color: #fff;
-  border-radius: 5px;
-}
-input {
-  border: none;
-  padding: 10px;
-  font-size: 14px !important;
 }
 
 .home-header-right {

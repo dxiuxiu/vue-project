@@ -3,7 +3,7 @@
 import Ap from '../pages/index.vue'
 const Home = { template: '<div>home</div>' }
 const Test = { template: '<div>test</div>' }
-
+import NotFound from '../components/NotFound/index.vue'
 // import App from '../App.vue'
 /** 默认值内容?? */
 const routes = [
@@ -21,6 +21,10 @@ const routes = [
               component: Test
             }
           ]
+    },
+    {
+      path:'/404',
+      component:NotFound
     }
 ]
 

@@ -4,6 +4,8 @@ import routes from './router/index'
 import VueRouter from 'vue-router'
 
 import './assets/css/index.css' // css reset
+
+import store from './store'
 Vue.use(VueRouter);
 
 
@@ -16,7 +18,8 @@ const router = new VueRouter({
 /** ?? */
 new Vue({
   render: h => h(App),
-  router
+  router,
+  store
 }).$mount('#app')
 
 

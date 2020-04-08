@@ -1,13 +1,44 @@
 <template>
   <div class="search-container">
     <i class="icon-search"></i>
-    <input placeholder="请输入关键字" />
+    <!-- 
+       @keyup.enter="enterFn"
+       @keyup.enter="enter"
+     -->
+    <input placeholder="请输入关键字" 
+    v-model="inputText" 
+    
+    @keyup.enter="enter(inputText)"
+     />
+
+    <!-- {{inputText}} -->
   </div>
 </template>
 
 <script>
 export default {
-  name: "HomeHeader"
+  name: "Search",
+  props: {
+    enter: {
+      type: Function,
+      default: null
+    }
+  },
+  methods: {
+    enterFn: function() {
+      if (this.enter) {
+        this.enter(this.inputText);
+      }
+    },
+    changeFn: () => {
+      console.log("change");
+    }
+  },
+  data() {
+    return {
+      inputText: ""
+    };
+  }
 };
 </script>
 

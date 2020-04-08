@@ -2,7 +2,7 @@
   <div class="home-header-container clear-fix">
     <div class="home-header-left float-left">
       <router-link to="/city">
-        <span>cityName</span>
+        <span>{{$store.state.useInfo.userCity}}</span>
         &nbsp;
         <i class="icon-angle-down"></i>
       </router-link>
@@ -14,17 +14,40 @@
     </div>
 
     <div class="home-header-middle">
-      <Search/>
+      <Search :enter="searchEnter" />
+      <!-- <Search @enter="searchEnter" /> -->
     </div>
+    <button @click="updateUserInfo">update</button>
   </div>
 </template>
 
 <script>
-import Search from '../Search/index.vue'
+// import { mapActions } from "vuex";
+import { mapMutations } from "vuex";
+import Search from "../Search/index.vue";
 export default {
   name: "HomeHeader",
   components: {
     Search
+  },
+  methods: {
+    // ...mapActions(["update"]),
+    ...mapMutations(["update"]),
+    updateUserInfo: function() {
+      // console.log(this.$store.state)
+      console.log(this);
+      this.update({ userCity: "北京" });
+      // this.$store.commit("update", { useCity: "北京" });
+    },
+    searchEnter: function(value) {
+      console.log("search enter");
+      console.log(value);
+    }
+  },
+  data() {
+    return {
+      text: "test"
+    };
   }
 };
 </script>

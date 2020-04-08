@@ -1,15 +1,20 @@
 <template>
-  <div class=''>
-    User
-  </div>
+  <div class>User</div>
 </template>
 
 <script>
+import router from '../../router'
 export default {
-  name: 'User',
-}
+  name: "User",
+  mounted() {
+    console.log("mounted");
+    const { userInfo } = this.$store.state;
+    if (!userInfo.userName) {
+      router.push(`/login`);
+    }
+  }
+};
 </script>
 
 <style scoped>
-
 </style>

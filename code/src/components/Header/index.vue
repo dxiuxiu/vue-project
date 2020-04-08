@@ -8,24 +8,33 @@
   </div>
 </template>
 <script>
+import router from '../../router'
 export default {
-  name: 'Header',
+  name: "Header",
   props: {
     title: {
       type: String,
       required: true,
       default: "title"
+    },
+    backRouter: {
+      type:String,
+      required: false,
     }
   },
   methods: {
-    handleClick: () => {
+    handleClick: function(){
+      const backRouter = this.backRouter
+      if (backRouter) {
+        router.push(backRouter);
+        return;
+      }
       window.history.back();
       // router.go(-1)
     }
   },
   data() {
-    return {
-    };
+    return {};
   }
 };
 </script>

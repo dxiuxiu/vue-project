@@ -1,22 +1,31 @@
 <template>
   <div class="city-container">
-      <Header title="选择城市"/>
-      city
+    <Header title="选择城市" />
+    <CurrentCity :cityName="userInfo.cityName" />
   </div>
 </template>
 <script>
-import Header from '../../components/Header'
+import Header from "../../components/Header";
+import CurrentCity from "../../components/CurentCity";
 export default {
-  name: 'City',
+  name: "City",
   components: {
-      Header,
+    Header,
+    CurrentCity
+  },
+  methods: {
+    
+  },
+  data() {
+    return {
+      userInfo: this.$store.state.userInfo
+    };
   }
 };
 </script>
 
 <style scoped>
 /* css */
-.city-container{
-
+.city-container {
 }
 </style>

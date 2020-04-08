@@ -2,7 +2,7 @@
 /** 1、设置初始 state */
 const state = {
     userName:undefined,
-    userCity:'西安'
+    cityName:'西安'
 }
 
 /** 

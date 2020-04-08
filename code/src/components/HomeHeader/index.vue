@@ -2,7 +2,7 @@
   <div class="home-header-container clear-fix">
     <div class="home-header-left float-left">
       <router-link to="/city">
-        <span>{{$store.state.useInfo.userCity}}</span>
+        <span>{{$store.state.userInfo.cityName}}</span>
         &nbsp;
         <i class="icon-angle-down"></i>
       </router-link>

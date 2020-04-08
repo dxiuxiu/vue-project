@@ -19,7 +19,6 @@ export default {
   },
   methods: {
     handleClick: () => {
-      console.log('handleClick')
       window.history.back();
       // router.go(-1)
     }

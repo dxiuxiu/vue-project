@@ -1,6 +1,7 @@
 <template>
-  <ul class="city-list-container">
-    <li class="city-item" @click="clickHandle('上海')">上海</li>
+  <ul class="city-list-container" ref="cityContainer">
+    <li class="city-item" v-for="item in citys" :key="item.id" :data-name="item.name">{{item.name}}</li>
+    <!-- <li class="city-item" @click="clickHandle('上海')">上海</li>
     <li class="city-item" @click="clickHandle('北京')">北京</li>
     <li class="city-item" @click="clickHandle('杭州')">杭州</li>
     <li class="city-item" @click="clickHandle('无锡')">无锡</li>
@@ -18,7 +19,7 @@
     <li class="city-item" @click="clickHandle('榆林')">榆林</li>
     <li class="city-item" @click="clickHandle('测试')">---</li>
     <li class="city-item" @click="clickHandle('测试')">---</li>
-    <li class="city-item" @click="clickHandle('测试')">---</li>
+    <li class="city-item" @click="clickHandle('测试')">---</li>-->
   </ul>
 </template>
 <script>
@@ -27,28 +28,107 @@ export default {
   props: {
     cityChange: {
       type: Function,
-      default:null
+      default: null
     }
   },
   methods: {
     /** 这里写箭头函数 this 是会报错滴 */
-    clickHandle: function (cityName) {
+    clickHandle: function(cityName) {
       if (!this.cityChange) {
         return;
       }
       this.cityChange(cityName);
     }
-    // clickHandle: (cityName) => {
-    //   if (!this.cityChange) {
-    //     return;
-    //   }
-    //   this.cityChange(cityName);
-    // }
   },
   data() {
-    return {};
+    return {
+      /** 要展示的城市数据列表 */
+      citys: [
+        {
+          id: "shanghai",
+          name: "上海"
+        },
+        {
+          id: "beijing",
+          name: "北京"
+        },
+        {
+          id: "hangzhou",
+          name: "杭州"
+        },
+        {
+          id: "wuxi",
+          name: "无锡"
+        },
+        {
+          id: "guangzhou",
+          name: "广州"
+        },
+        {
+          id: "xian",
+          name: "西安"
+        },
+        {
+          id: "jiangsu",
+          name: "江苏"
+        },
+        {
+          id: "zhejiang",
+          name: "浙江"
+        },
+        {
+          id: "hunan",
+          name: "湖南"
+        },
+        {
+          id: "hubei",
+          name: "湖北"
+        },
+        {
+          id: "jiangxi",
+          name: "江西"
+        },
+        {
+          id: "hanzhong",
+          name: "汉中"
+        },
+        {
+          id: "yulin",
+          name: "榆林"
+        },
+        {
+          id: "test1",
+          name: "---"
+        },
+        {
+          id: "test2",
+          name: "---"
+        },
+        {
+          id: "test3",
+          name: "---"
+        }
+      ]
+    };
   },
-  activated() {}
+  activated() {},
+  mounted: function() {
+    this.$nextTick(function() {
+      const cityContainer = this.$refs.cityContainer;
+      const that = this;
+      /** 这里绑定了怎么在 beforeDestroy 中顺利移除呢? */
+      cityContainer.addEventListener(
+        "click",
+        function(e) {
+          const target = e.target;
+          if (target.className === "city-item") {
+            that.clickHandle(target.innerHTML);
+          }
+        },
+        false
+      );
+    });
+  }
 };
 </script>
 

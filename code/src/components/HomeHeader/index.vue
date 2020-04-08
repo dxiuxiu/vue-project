@@ -17,13 +17,10 @@
       <Search :enter="searchEnter" />
       <!-- <Search @enter="searchEnter" /> -->
     </div>
-    <button @click="updateUserInfo">update</button>
   </div>
 </template>
 
 <script>
-// import { mapActions } from "vuex";
-import { mapMutations } from "vuex";
 import Search from "../Search/index.vue";
 export default {
   name: "HomeHeader",
@@ -31,14 +28,6 @@ export default {
     Search
   },
   methods: {
-    // ...mapActions(["update"]),
-    ...mapMutations(["update"]),
-    updateUserInfo: function() {
-      // console.log(this.$store.state)
-      console.log(this);
-      this.update({ userCity: "北京" });
-      // this.$store.commit("update", { useCity: "北京" });
-    },
     searchEnter: function(value) {
       console.log("search enter");
       console.log(value);

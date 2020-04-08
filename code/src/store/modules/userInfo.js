@@ -20,8 +20,8 @@ const mutations = {
             state.userName = payload.userName
             return
         } 
-        if(payload.userCity){
-            state.userCity = payload.userCity
+        if(payload.cityName){
+            state.cityName = payload.cityName
             return
         } 
     }

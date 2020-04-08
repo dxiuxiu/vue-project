@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
-import routes from './router/index'
 import VueRouter from 'vue-router'
-
+import router from './router/index.js'
 import './assets/css/index.css' // css reset
 
 import store from './store'
@@ -12,9 +11,6 @@ Vue.use(VueRouter);
 Vue.config.productionTip = false
 
 
-const router = new VueRouter({
-  routes
-})
 /** ?? */
 new Vue({
   render: h => h(App),

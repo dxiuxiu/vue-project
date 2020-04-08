@@ -1,4 +1,5 @@
 
+import VueRouter from 'vue-router'
 
 const Home = () => import('../pages/Home/index.vue')
 const User = () => import('../pages/User/index.vue')
@@ -25,4 +26,7 @@ const routes = [
   }
 ]
 
-export default routes
+const router = new VueRouter({
+  routes
+})
+export default router

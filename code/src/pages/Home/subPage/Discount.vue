@@ -1,10 +1,14 @@
 <template>
-  <div>datas {{datas.length}}</div>
+  <div>
+    Discount
+  </div>
 </template>
 <script>
-import { getCategory } from "../../../../api/home.js";
+import { getCategory } from "../../../api/home.js";
 export default {
-   name:"Category",
+  name: "Discount",
+  components: {
+  },
   data() {
     return {
       datas: []
@@ -14,7 +18,7 @@ export default {
   mounted() {
     getCategory().then(
       resDatas => {
-        this.datas = resDatas
+        this.datas = resDatas;
       },
       err => {
         console.error(err);

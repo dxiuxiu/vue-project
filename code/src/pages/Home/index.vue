@@ -1,18 +1,18 @@
 <template>
   <div class=''>
     <HomeHeader/>
-    <Category/>
+    <Discount/>
   </div>
 </template>
 
 <script>
 import HomeHeader from '../../components/HomeHeader'
-import Category from './subPage/Category'
+import Discount from './subPage/Discount'
 export default {
   name: 'Home',
   components: {
     HomeHeader,
-    Category
+    Discount
   }
 }
 </script>

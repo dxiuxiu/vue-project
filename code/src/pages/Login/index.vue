@@ -10,23 +10,37 @@
 <script>
 import Header from "../../components/Header";
 import LoginCom from "../../components/Login";
-import {mapActions} from 'vuex'
+import { mapActions } from "vuex";
+import router from "../../router/index.js";
 export default {
   name: "Login",
+  // props: {
+  //   routerProps
+  // },
   components: {
     Header,
     LoginCom
   },
   methods: {
-    ...mapActions(['update']),
+    ...mapActions(["update"]),
     loginHandle(data) {
-      const {userInfo} = this.$store.state
-      userInfo.userName = data.userName
+      const { userInfo } = this.$store.state;
+      userInfo.userName = data.userName;
       /**
-       * @TODO 
+       * @TODO
        * 调用登录接口,登录成功后修改 store
-      */
-      this.update(userInfo)
+       */
+      this.update(userInfo);
+      if (this.$store.state.userInfo.userName) {
+        // const routerProps = this.$route.params.routerProps;
+        // console.log(routerProps)
+        // if (routerProps) {
+        //   router.push(`/${routerProps}`); // 跳转到来源页面
+        // } else {
+        //   // router.push(`/user`); // 跳转到默认页面
+        // }
+        router.push(`/user`); // 跳转到默认页面
+      }
     }
   },
   data() {

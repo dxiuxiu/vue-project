@@ -19,9 +19,9 @@ export default {
     loginHandle: {
       type: Function,
       required: true,
-      default:function(data){
+      default:function(){
         console.error('I am default loginHandle')
-        console.log(data)
+        // console.log(data)
       }
     }
   },

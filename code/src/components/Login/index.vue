@@ -2,12 +2,12 @@
   <div class="login-container">
     <div class="input-container phone-container">
       <i class="icon-tablet"></i>
-      <input type="text" placeholder="输入手机号" onchange="{changeHandle}" v-model="phone" />
+      <input type="text" placeholder="输入手机号"  v-model="phone" />
     </div>
     <div class="input-container password-container clear-fix">
       <i class="icon-key"></i>
       <button>发送验证码</button>
-      <input type="text" placeholder="输入验证码" />
+      <input type="text" placeholder="输入验证码" v-model ="phoneCode"/>
     </div>
     <button class="btn-login" @click="clickHandle">登录</button>
   </div>
@@ -18,25 +18,33 @@ export default {
   props: {
     loginHandle: {
       type: Function,
-      required: false
+      required: true,
+      default:function(data){
+        console.error('I am default loginHandle')
+        console.log(data)
+      }
     }
   },
   methods: {
     clickHandle() {
       const userName = this.phone;
-      if (!userName) {
-        console.log("登录失败");
+      const phoneCode = this.phoneCode
+      if (!userName || !phoneCode) {
+        alert('用户名密码不能为空!')
         return;
       }
-      console.log("登录成功");
       if (this.loginHandle) {
-        this.loginHandle(userName);
+        this.loginHandle({
+          userName,
+          phoneCode
+        });
       }
     }
   },
   data () {
     return {
-      phone:''
+      phone:'',
+      phoneCode:''
     }
   }
 };

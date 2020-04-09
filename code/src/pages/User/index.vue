@@ -7,7 +7,6 @@ import router from '../../router'
 export default {
   name: "User",
   mounted() {
-    console.log("mounted");
     const { userInfo } = this.$store.state;
     if (!userInfo.userName) {
       router.push(`/login`);

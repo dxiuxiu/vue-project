@@ -59,7 +59,7 @@ export default {
 .input-container {
   background-color: #fff;
   border: 1px solid #fff;
-  padding: 5px 10px;
+  padding: 0px 10px;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -67,12 +67,15 @@ export default {
   font-size: 16px;
   display: block;
   border: none;
+  padding: 5px 0px;
 }
 .input-container i {
   color: rgb(233, 32, 61);
   width: 16px;
   float: left;
-  margin-top: 3px;
+  /* margin-top: 3px; */
+  padding: 5px 0px;
+
 }
 .phone-container input {
   margin-left: 20px;
@@ -84,12 +87,13 @@ export default {
   margin-left: 20px;
   margin-right: 95px;
   /* 为什么这里不设置宽度时通过 margin-left margin-right 不能达到预期效果呢 */
-  width: 165px; 
+  width: 145px; 
 }
 .password-container>button {
   width: 95px;
   height: 100%;
   font-size: 16px;
+  /* font-size: 12px; */
   color: rgb(233, 32, 61);
   border: 0;
   background-color: #fff;

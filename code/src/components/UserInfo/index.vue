@@ -41,4 +41,7 @@ export default {
   color: #666;
   text-align: left;
 }
+.userInfo-container p > i {
+  color: #666;
+}
 </style>

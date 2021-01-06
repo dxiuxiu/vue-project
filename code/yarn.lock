@@ -1315,7 +1315,7 @@ acorn@^7.1.0, acorn@^7.1.1:
 
 add@^2.0.6:
   version "2.0.6"
-  resolved "http://r.cnpmjs.org/add/download/add-2.0.6.tgz#248f0a9f6e5a528ef2295dbeec30532130ae2235"
+  resolved "https://r.cnpmjs.org/add/download/add-2.0.6.tgz#248f0a9f6e5a528ef2295dbeec30532130ae2235"
   integrity sha1-JI8Kn25aUo7yKV2+7DBTITCuIjU=
 
 address@^1.1.2:
@@ -1574,12 +1574,12 @@ aws4@^1.8.0:
   resolved "https://registry.npm.taobao.org/aws4/download/aws4-1.9.1.tgz?cache=0&sync_timestamp=1578958301021&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faws4%2Fdownload%2Faws4-1.9.1.tgz#7e33d8f7d449b3f673cd72deb9abdc552dbe528e"
   integrity sha1-fjPY99RJs/ZzzXLeuavcVS2+Uo4=
 
-axios@^0.19.2:
-  version "0.19.2"
-  resolved "http://r.cnpmjs.org/axios/download/axios-0.19.2.tgz#3ea36c5d8818d0d5f8a8a97a6d36b86cdc00cb27"
-  integrity sha1-PqNsXYgY0NX4qKl6bTa4bNwAyyc=
+axios@^0.21.1:
+  version "0.21.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
+  integrity sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==
   dependencies:
-    follow-redirects "1.5.10"
+    follow-redirects "^1.10.0"
 
 babel-eslint@^10.1.0:
   version "10.1.0"
@@ -2681,14 +2681,7 @@ debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
   dependencies:
     ms "2.0.0"
 
-debug@=3.1.0:
-  version "3.1.0"
-  resolved "http://r.cnpmjs.org/debug/download/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
-  integrity sha1-W7WgZyYotkFJVmuhaBnmFRjGcmE=
-  dependencies:
-    ms "2.0.0"
-
-debug@^3.0.0, debug@^3.1.1, debug@^3.2.5:
+debug@^3.1.1, debug@^3.2.5:
   version "3.2.6"
   resolved "https://registry.npm.taobao.org/debug/download/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
   integrity sha1-6D0X3hbYp++3cX7b5fsQE17uYps=
@@ -2886,7 +2879,7 @@ dom-serializer@0:
 
 dom7@^2.1.3:
   version "2.1.3"
-  resolved "http://r.cnpmjs.org/dom7/download/dom7-2.1.3.tgz#a736f9c3bfbc4ca039a81cd095f97d1d7f3de19c"
+  resolved "https://r.cnpmjs.org/dom7/download/dom7-2.1.3.tgz#a736f9c3bfbc4ca039a81cd095f97d1d7f3de19c"
   integrity sha1-pzb5w7+8TKA5qBzQlfl9HX894Zw=
   dependencies:
     ssr-window "^1.0.1"
@@ -3603,19 +3596,10 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
-follow-redirects@1.5.10:
-  version "1.5.10"
-  resolved "http://r.cnpmjs.org/follow-redirects/download/follow-redirects-1.5.10.tgz#7b7a9f9aea2fdff36786a94ff643ed07f4ff5e2a"
-  integrity sha1-e3qfmuov3/NnhqlP9kPtB/T/Xio=
-  dependencies:
-    debug "=3.1.0"
-
-follow-redirects@^1.0.0:
-  version "1.11.0"
-  resolved "https://registry.npm.taobao.org/follow-redirects/download/follow-redirects-1.11.0.tgz?cache=0&sync_timestamp=1585479454391&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ffollow-redirects%2Fdownload%2Ffollow-redirects-1.11.0.tgz#afa14f08ba12a52963140fe43212658897bc0ecb"
-  integrity sha1-r6FPCLoSpSljFA/kMhJliJe8Dss=
-  dependencies:
-    debug "^3.0.0"
+follow-redirects@^1.0.0, follow-redirects@^1.10.0:
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.1.tgz#5f69b813376cee4fd0474a3aba835df04ab763b7"
+  integrity sha512-SSG5xmZh1mkPGyKzjZP8zLjltIfpW32Y5QpdNJyjcfGxK3qo3NDDkZOZSFiGn1A6SclQxY9GzEwAHQ3dmYRWpg==
 
 for-in@^1.0.2:
   version "1.0.2"
@@ -7155,7 +7139,7 @@ sshpk@^1.7.0:
 
 ssr-window@^1.0.1:
   version "1.0.1"
-  resolved "http://r.cnpmjs.org/ssr-window/download/ssr-window-1.0.1.tgz#30752a6a4666e7767f0b7e6aa6fc2fdbd0d9b369"
+  resolved "https://r.cnpmjs.org/ssr-window/download/ssr-window-1.0.1.tgz#30752a6a4666e7767f0b7e6aa6fc2fdbd0d9b369"
   integrity sha1-MHUqakZm53Z/C35qpvwv29DZs2k=
 
 ssri@^6.0.1:
@@ -7430,7 +7414,7 @@ svgo@^1.0.0:
 
 swiper@^5.3.6:
   version "5.3.6"
-  resolved "http://r.cnpmjs.org/swiper/download/swiper-5.3.6.tgz#102b7f8145d734ec4c30e04602160382356b5948"
+  resolved "https://r.cnpmjs.org/swiper/download/swiper-5.3.6.tgz#102b7f8145d734ec4c30e04602160382356b5948"
   integrity sha1-ECt/gUXXNOxMMOBGAhYDgjVrWUg=
   dependencies:
     dom7 "^2.1.3"
@@ -7906,7 +7890,7 @@ vm-browserify@^1.0.1:
 
 vue-awesome-swiper@^4.1.0:
   version "4.1.0"
-  resolved "http://r.cnpmjs.org/vue-awesome-swiper/download/vue-awesome-swiper-4.1.0.tgz#163e94597b119e5476d80380e208d2d9a7419c75"
+  resolved "https://r.cnpmjs.org/vue-awesome-swiper/download/vue-awesome-swiper-4.1.0.tgz#163e94597b119e5476d80380e208d2d9a7419c75"
   integrity sha1-Fj6UWXsRnlR22AOA4gjS2adBnHU=
 
 vue-eslint-parser@^7.0.0:
@@ -7939,7 +7923,7 @@ vue-loader@^15.9.1:
 
 vue-router@^3.1.6:
   version "3.1.6"
-  resolved "http://r.cnpmjs.org/vue-router/download/vue-router-3.1.6.tgz#45f5a3a3843e31702c061dd829393554e4328f89"
+  resolved "https://r.cnpmjs.org/vue-router/download/vue-router-3.1.6.tgz#45f5a3a3843e31702c061dd829393554e4328f89"
   integrity sha1-RfWjo4Q+MXAsBh3YKTk1VOQyj4k=
 
 vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
@@ -7970,7 +7954,7 @@ vue@^2.6.11:
 
 vuex@^3.1.3:
   version "3.1.3"
-  resolved "http://r.cnpmjs.org/vuex/download/vuex-3.1.3.tgz#f2ad73e3fb73691698b38c93f66e58e267947180"
+  resolved "https://r.cnpmjs.org/vuex/download/vuex-3.1.3.tgz#f2ad73e3fb73691698b38c93f66e58e267947180"
   integrity sha1-8q1z4/tzaRaYs4yT9m5Y4meUcYA=
 
 watchpack@^1.6.0:
